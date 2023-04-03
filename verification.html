@@ -1,0 +1,614 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task3</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+   <style>
+      .main {
+         width: 100%;
+         height: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .main {
+         background-image: url(./images/r.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+
+      .loginbtn {
+         height: 45px;
+         width: 100%;
+         margin-top: 0px;
+      }
+
+      .card.log {
+         width: 400px;
+      }
+
+      .googleholder {
+         margin-top: 10px;
+      }
+
+      .card .input {
+         height: 40px;
+         border-radius: 8px;
+         margin-bottom: 25px;
+         border: 0;
+      }
+
+      .googlebtn {
+         width: 335px;
+      }
+
+      .fa-google {
+         font-size: 30px;
+      }
+
+      .orbar {
+         width: 300px;
+         height: 3px;
+         position: absolute;
+         margin-top: -5px;
+      }
+
+      .card-body i {
+         font-size: 25px;
+      }
+
+      #checkbox {
+         width: 30px;
+         height: 20px;
+      }
+
+      .remlog {
+         margin-top: -20px;
+         margin-bottom: 20px;
+         height: 30px;
+         justify-content: center;
+      }
+
+      #fp {
+         font-size: 13px;
+      }
+
+      #terms {
+         position: absolute;
+         margin-top: 0px;
+      }
+
+      #fp {
+         position: absolute;
+         margin-top: 0px;
+         margin-left: 200px;
+      }
+
+      #mail {
+         position: absolute;
+         margin-left: 13px;
+         margin-top: 10px;
+         font-size: 20px;
+      }
+
+      #lock {
+         position: absolute;
+         margin-left: 13px;
+         margin-top: 75px;
+         font-size: 20px;
+      }
+
+      #veri {
+         position: absolute;
+         margin-left: 10px;
+         margin-top: 10px;
+         font-size: 20px;
+      }
+
+      #mailbar {
+         position: absolute;
+         background-color: black;
+         margin-left: 45px;
+         margin-top: 0px;
+         width: 2px;
+         height: 40px;
+      }
+
+      #passbar {
+         position: absolute;
+         background-color: black;
+         margin-left: 45px;
+         margin-top: 65px;
+         width: 2px;
+         height: 40px;
+      }
+
+      #terms {
+         font-size: 13px;
+      }
+
+      #veribar {
+         position: absolute;
+         background-color: black;
+         margin-left: 40px;
+         margin-top: 0px;
+         width: 2px;
+         height: 40px;
+      }
+
+      #togglePassword {
+         position: absolute;
+         margin-left: 305px;
+         margin-top: 75px;
+         font-size: 20;
+      }
+
+      .bottom {
+         margin-bottom: 20px;
+         margin-top: -15px;
+      }
+
+      @media (min-width: 200px) and (max-width: 300px) {
+         .card .input {
+            font-size: 10px;
+         }
+
+         #checkbox {
+            width: 15px;
+            height: 15px;
+         }
+
+         .remlog {
+            width: 100%;
+            margin-left: 0px;
+         }
+
+         .card-body i {
+            font-size: 15px;
+         }
+
+         #user {
+            margin-top: 14px;
+            margin-left: 10px;
+         }
+
+         #lock {
+            margin-top: 77px;
+            margin-left: 10px;
+         }
+
+         #userbar,
+         #passbar {
+            margin-left: 30px;
+         }
+
+         #togglePassword {
+            margin-top: 77px;
+            margin-left: 170px;
+            font-size: 15;
+         }
+      }
+
+      @media (min-width: 301px) and (max-width: 370px) {
+         .remlog {
+            width: 100%;
+            margin-left: 0px;
+         }
+
+         .card-body i {
+            font-size: 19px;
+         }
+
+         #user {
+            margin-top: 14px;
+            margin-left: 10px;
+         }
+
+         #lock {
+            margin-top: 77px;
+            margin-left: 12px;
+         }
+
+         #userbar,
+         #passbar {
+            margin-left: 35px;
+         }
+
+         #togglePassword {
+            margin-top: 77px;
+            margin-left: 240px;
+            font-size: 19;
+         }
+      }
+
+      @media (min-width: 371px) and (max-width: 400px) {
+         .remlog {
+            width: 100%;
+            margin-left: 0px;
+         }
+
+         .card-body i {
+            font-size: 19px;
+         }
+
+         #user {
+            margin-top: 14px;
+            margin-left: 10px;
+         }
+
+         #lock {
+            margin-top: 77px;
+            margin-left: 12px;
+         }
+
+         #userbar,
+         #passbar {
+            margin-left: 35px;
+         }
+
+         #togglePassword {
+            margin-top: 77px;
+            margin-left: 260px;
+            font-size: 19;
+         }
+      }
+
+      @media (min-width: 501px) and (max-width:1600px) {
+         #togglePassword {
+            margin-left: 280px;
+         }
+      }
+
+      @media (min-width: 401px) and (max-width: 500px) {
+
+         .remlog {
+            width: 100%;
+            margin-left: 0px;
+         }
+
+         .card-body i {
+            font-size: 19px;
+         }
+
+         #user {
+            margin-top: 14px;
+            margin-left: 10px;
+         }
+
+         #lock {
+            margin-top: 77px;
+            margin-left: 12px;
+         }
+
+         #userbar,
+         #passbar {
+            margin-left: 35px;
+         }
+
+         #togglePassword {
+            margin-top: 77px;
+            margin-left: 295px;
+            font-size: 19;
+         }
+      }
+
+      @media (min-width: 200px) and (max-width: 500px) {
+         .card.log {
+            width: 100%;
+            height: 100%;
+         }
+      }
+
+      @media (min-width: 400px) and (max-width: 500px) {
+         .loghead {
+            font-size: 40px;
+            margin-top: 20px;
+         }
+
+         .welc {
+            font-size: 20px;
+            margin-top: 20px;
+         }
+
+         .googleholder {
+            margin-top: 30px;
+            margin-bottom: 10px;
+         }
+
+         .googlebtn {
+            height: 60px;
+            margin-bottom: 20px;
+         }
+
+         .card .input {
+            width: 350px;
+            height: 50px;
+            margin-top: 20px;
+            margin-left: -22px;
+         }
+
+         #lock {
+            margin-left: -6px;
+            margin-top: 128px;
+            font-size: 25px;
+         }
+
+         #mail {
+            margin-left: -6px;
+            margin-top: 32px;
+            font-size: 25px;
+         }
+
+         #mailbar {
+            margin-left: 30px;
+            margin-top: 20px;
+            height: 50px;
+         }
+
+         #passbar {
+            margin-left: 30px;
+            margin-top: 115px;
+            height: 50px;
+         }
+
+         #togglePassword {
+            margin-left: 290px;
+            margin-top: 133px;
+         }
+
+         .remlog {
+            margin-top: 10px;
+         }
+
+         .repass {
+            margin-left: -10px;
+         }
+
+         .bottom {
+            margin-top: 10px;
+         }
+      }
+
+
+      @media (min-width: 300px) and (max-width: 399px) {
+         .loghead {
+            font-size: 40px;
+            margin-top: 20px;
+         }
+
+         .welc {
+            font-size: 15px;
+            margin-top: 20px;
+         }
+
+         .googleholder {
+            margin-top: 30px;
+            margin-bottom: 10px;
+         }
+
+         .googlebtn {
+            height: 60px;
+            width: 280px;
+            margin-bottom: 20px;
+         }
+
+         .orbar {
+            width: 285px;
+         }
+
+         .card .input {
+            width: 295px;
+            height: 50px;
+            margin-top: 20px;
+            margin-left: -15px;
+         }
+
+         #lock {
+            margin-left: -3px;
+            margin-top: 131px;
+            font-size: 20px;
+         }
+
+         #mail {
+            margin-left: -6px;
+            margin-top: 38px;
+            font-size: 17px;
+         }
+
+         #mailbar {
+            margin-left: 23px;
+            margin-top: 20px;
+            height: 50px;
+         }
+
+         #passbar {
+            margin-left: 23px;
+            margin-top: 115px;
+            height: 50px;
+         }
+
+         #togglePassword {
+            margin-left: 250px;
+            margin-top: 133px;
+         }
+
+         .remlog {
+            margin-top: 10px;
+         }
+
+         .repass {
+            margin-left: -10px;
+         }
+
+         .bottom {
+            margin-top: 0px;
+         }
+
+         #fp {
+            margin-left: 160px;
+         }
+      }
+
+      @media (min-width: 200px) and (max-width: 299px) {
+         .loghead {
+            font-size: 30px;
+            margin-top: 20px;
+         }
+
+         .welc {
+            font-size: 10px;
+            margin-top: 10px;
+         }
+
+         .googleholder {
+            margin-top: 20px;
+            margin-bottom: 0px;
+         }
+
+         .googlebtn {
+            height: 45px;
+            width: 180px;
+            margin-bottom: 0px;
+         }
+
+         .orbar {
+            width: 185px;
+         }
+
+         .card .input {
+            width: 195px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: -15px;
+         }
+
+         #lock {
+            margin-left: -9px;
+            margin-top: 83px;
+            font-size: 15px;
+         }
+
+         #mail {
+            margin-left: -9px;
+            margin-top: 20px;
+            font-size: 10px;
+         }
+
+         #mailbar {
+            margin-left: 6px;
+            margin-top: 10px;
+            height: 30px;
+         }
+
+         #passbar {
+            margin-left: 6px;
+            margin-top: 75px;
+            height: 30px;
+         }
+
+         #togglePassword {
+            margin-left: 160px;
+            margin-top: 83px;
+            font-size: 13px;
+         }
+
+         #checkbox {
+            width: 20px;
+         }
+
+         #terms {
+            font-size: 10px;
+         }
+
+         .remlog {
+            margin-top: -20px;
+         }
+
+         .repass {
+            margin-left: -10px;
+         }
+
+         .bottom {
+            margin-top: -10px;
+            font-size: 10px;
+         }
+
+         #fp {
+            margin-left: 100px;
+            font-size: 10px;
+         }
+
+         .loginbtn {
+            height: 30px;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container-fluid d-flex align-items-center justify-content-center main ">
+
+      <!-- container for signup details -->
+      <div class="card log rounded-4 " style="background-color: rgba(0, 0, 0, 0.712);">
+
+         <div class="card-top d-flex flex-column justify-content-center align-items-start text-light"
+            style="margin-top: 10px; ">
+            <h4 class="fw-bold" style="margin-left: 30px;">Verification Code
+            </h4>
+
+         </div>
+         <div class="card-top d-flex flex-column justify-content-center align-items-center text-light"
+            style="margin-top: 10px; margin-bottom: 10px;">
+            <h8 style="margin-left: -15px; width: 80%; height: 50px;">Please enter the verification code sent to your
+               email</h8>
+         </div>
+
+
+         <form action="intro.html" method="">
+            <!-- container for input details -->
+
+            <div class="card-body d-flex flex-column"
+               style="margin-left: 15px ; margin-right: 15px; margin-top: -10px;">
+
+
+
+               <!-- verify icon -->
+               <i class="fa fa-send text-black" id="veri"></i>
+               <!-- verify input -->
+               <input type="text" pattern=".{6}" placeholder="234567" class="text-center input" required="" id="verify"
+                  name="verify">
+
+               <!-- verify bar -->
+               <div id="veribar"></div>
+
+               <div class="card-body d-flex flex-column remlog">
+                  <h9><a href="http://" class="fw-bolder" style="color: rgb(211, 46, 211);">Didn't get a verification
+                        code?</a></h9>
+               </div>
+
+
+
+               <button type="submit" name="submit" value="submit"
+                  class="btn btn-outline-light  fw-bold d-flex justify-content-center align-items-center "
+                  style="height:45px; width: 100%; margin-top: 0px;">
+                  <h7>Continue</h7>
+               </button>
+            </div>
+
+         </form>
+
+
+      </div>
+
+
+
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

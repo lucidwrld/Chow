@@ -1,0 +1,1495 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+
+    }
+
+    .mobileview {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      text-shadow: 2px 2px #0a0a0a75;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+
+    .nvbar {
+      background-color: #5e0352fd;
+      height: 8vh;
+      width: 100%;
+    }
+
+    .nvbar ul {
+      width: 100%;
+      height: 8vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .nvbar img {
+      width: 100px;
+      height: 7vh;
+    }
+
+    .fa-user-circle {
+      font-size: 30px;
+      letter-spacing: 10px;
+    }
+
+    .nvbar button {
+      text-shadow: 2px 2px #00000075;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      height: 100%;
+
+    }
+
+    .dropdown-content {
+      display: block;
+      position: absolute;
+      width: 100%;
+      overflow: auto;
+      box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    .dropdown-content.non {
+      display: none;
+    }
+
+    .dropdown-content ul {
+      height: 100%;
+    }
+
+    .dropdown-content a {
+      text-shadow: none;
+    }
+
+    .dropdown-content li:hover {
+      background-color: rgba(122, 118, 118, 0.438);
+    }
+
+    .dropdown-content li {
+      height: 7vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.527);
+    }
+
+    #dropbtn {
+      height: 100%;
+      width: 100px;
+
+    }
+
+    .show {
+      width: 100% auto;
+      overflow-x: auto;
+      display: flex;
+      border: 0px;
+      height: 70vh;
+    }
+
+    .showw {
+      height: 70vh;
+      width: 100%;
+      margin: 0px;
+      margin-top: 0px;
+      margin-left: 0px;
+      border: 0px;
+    }
+
+    #bigm {
+      background-image: url(images/image1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #bgh {
+      background-image: url(images/r.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #dhl {
+      background-image: url(images/slide3.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #onyx {
+      background-image: url(images/slide4.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #an {
+      background-image: url(images/slide5.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #buth {
+      background-image: url(images/slide6.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .heading {
+      width: 100%;
+      height: 15vh;
+      margin-top: 5vh;
+      text-shadow: 1px 1px #00000075;
+      /* background-color: #85178536; */
+      background-image: linear-gradient(to bottom, rgb(252, 236, 252), #e6dbdb36, rgb(236, 210, 236), rgb(219, 204, 207))
+    }
+
+    .mainbody {
+      width: 100%;
+      height: 83vh;
+    }
+
+    .stores {
+      height: 77vh;
+      width: 150vh;
+    }
+
+    .stores .card {
+      width: 45vh;
+      height: 37vh;
+    }
+
+    .stores .card-img {
+      width: 45vh;
+      height: 28vh;
+    }
+
+    .stores .card-img img {
+      width: 45vh;
+      height: 28vh;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .stores .card-img img:hover {
+      transform: scale(1.02);
+    }
+
+    .stores .card-footer {
+      text-shadow: none;
+      height: 9vh;
+    }
+
+    .stores .card-footer h5 {
+      color: black;
+    }
+
+    .stores .card-footer i {
+      color: rgb(97, 89, 89);
+    }
+
+    .fa-circle {
+      font-size: 10px
+    }
+
+    .footer {
+      height: 10vh;
+      width: 90%;
+
+    }
+
+    @media (min-width:1000px) and (max-width:1360px) {
+      .mainbody {
+        height: 90vh;
+      }
+
+      .stores {
+        height: 85vh;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 10vh;
+      }
+
+
+      .stores .card {
+        height: 38vh;
+      }
+    }
+
+    /* mobile view */
+    @media (min-width:78px) and (max-width:999px) {
+      .desktopview {
+        display: none;
+      }
+
+      .mobileview {
+        display: block;
+      }
+
+      .nvbar {
+        background-color: #5e0352fd;
+        height: 5vh;
+        width: 100%;
+        z-index: 10;
+      }
+
+      .nvbar ul {
+        width: 100%;
+        height: 5vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      .nvbar img {
+        width: 70px;
+        height: 4vh;
+      }
+
+      #mdropbtn {
+        height: 100%;
+        width: 100px;
+
+      }
+
+      .navpage {
+        position: fixed;
+        width: 30vh;
+        height: 100%;
+        z-index: 15;
+        right: 0;
+        top: 0;
+        background-image: linear-gradient(to bottom right, black, #85178536);
+        transition: 0.3s linear;
+        transform: translateX(100%);
+      }
+
+
+      .navpage i {
+        font-size: 35px;
+        margin-left: 0px;
+      }
+
+      .navpage li {
+        width: 100%;
+        display: flex;
+        border-bottom: 5px solid white;
+        justify-content: center;
+        align-items: center;
+        height: 170px;
+      }
+
+      .fa-user-circle {
+        font-size: 30px;
+        letter-spacing: 10px;
+      }
+
+      .nvbar button {
+        text-shadow: 2px 2px #00000075;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+      }
+
+      .mshow {
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        border: 0px;
+        height: 40vh;
+      }
+
+      .mshoww {
+        height: 40vh;
+        width: 100%;
+        margin: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+        border: 0px;
+      }
+
+      #mbigm {
+        background-image: url(images/image1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #mbgh {
+        background-image: url(images/r.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #mdhl {
+        background-image: url(images/slide3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #monyx {
+        background-image: url(images/slide4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #man {
+        background-image: url(images/slide5.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #mbuth {
+        background-image: url(images/slide6.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .heading {
+        width: 100%;
+        height: 10vh;
+        margin-top: 1vh;
+        text-shadow: 0px 1px #00000075;
+        background-image: linear-gradient(to bottom right, rgb(248, 245, 248), #00000036);
+      }
+
+      .heading h1 {
+        font-size: 35px;
+      }
+
+      .heading h2 {
+        font-size: 29px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 77vh;
+      }
+
+      .stores {
+        height: 73vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .stores .card {
+        width: 400px;
+        height: 270px;
+      }
+
+      .stores .card-img {
+        width: 400px;
+        height: 200px;
+      }
+
+      .stores .card-img img {
+        width: 400px;
+        height: 200px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 70px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 18px;
+        height: 2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 15px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+
+      .footer {
+        margin-top: 38vh;
+        height: 5vh;
+        width: 90%;
+
+      }
+
+      .footer h6 {
+        font-size: 13px;
+      }
+    }
+
+    @media (min-width:800px) and (max-width:899px) {
+      .heading h1 {
+        font-size: 30px;
+      }
+
+      .heading h2 {
+        font-size: 20px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 80vh;
+      }
+
+      .stores {
+        height: 75vh;
+        width: 100%;
+      }
+
+      .stores .card {
+        width: 350px;
+        height: 270px;
+      }
+
+      .stores .card-img {
+        width: 350px;
+        height: 200px;
+      }
+
+      .stores .card-img img {
+        width: 350px;
+        height: 200px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 70px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 18px;
+        height: 2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 15px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+    }
+
+    @media (min-width:756px) and (max-width:799px) {
+      .heading h1 {
+        font-size: 30px;
+      }
+
+      .heading h2 {
+        font-size: 20px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 90vh;
+      }
+
+      .stores {
+        height: 86vh;
+        width: 100%;
+      }
+
+      .stores .card {
+        width: 350px;
+        height: 270px;
+      }
+
+      .stores .card-img {
+        width: 350px;
+        height: 200px;
+      }
+
+      .stores .card-img img {
+        width: 350px;
+        height: 200px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 70px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 18px;
+        height: 2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 15px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+    }
+
+    @media (min-width:700px) and (max-width:755px) {
+      .heading h1 {
+        font-size: 29px;
+      }
+
+      .heading h2 {
+        font-size: 19px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 90vh;
+      }
+
+      .stores {
+        height: 86vh;
+        width: 100%;
+      }
+
+      .stores .card {
+        width: 310px;
+        height: 270px;
+      }
+
+      .stores .card-img {
+        width: 310px;
+        height: 200px;
+      }
+
+      .stores .card-img img {
+        width: 310px;
+        height: 200px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 70px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 18px;
+        height: 2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 15px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+    }
+
+    @media (min-width:600px) and (max-width:699px) {
+      .heading h1 {
+        font-size: 29px;
+      }
+
+      .heading h2 {
+        font-size: 19px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 90vh;
+      }
+
+      .stores {
+        height: 86vh;
+        width: 100%;
+      }
+
+      .stores .card {
+        width: 273px;
+        height: 270px;
+      }
+
+      .stores .card-img {
+        width: 273px;
+        height: 200px;
+      }
+
+      .stores .card-img img {
+        width: 273px;
+        height: 200px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 70px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 18px;
+        height: 2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 15px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+    }
+
+    @media (min-width:78px) and (max-width:599px) {
+      .stores {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+    }
+
+    @media (min-width:530px) and (max-width:599px) {
+      .heading {
+        width: 100%;
+        height: 10vh;
+        margin-top: 1vh;
+        text-shadow: 0px 1px #00000075;
+      }
+
+      .heading h1 {
+        font-size: 25px;
+      }
+
+      .heading h2 {
+        font-size: 20px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 260vh;
+      }
+
+      .stores {
+        height: 260vh;
+        width: 100%;
+      }
+
+      .stores .card {
+        width: 480px;
+        height: 300px;
+
+      }
+
+      .stores .card-img {
+        width: 480px;
+        height: 230px;
+      }
+
+      .stores .card-img img {
+        width: 480px;
+        height: 230px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 70px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 18px;
+        height: 2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 15px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+    }
+
+    @media (min-width:470px) and (max-width:529px) {
+      .mshow {
+        height: 25vh;
+      }
+
+      .mshoww {
+        height: 25vh;
+      }
+
+      .heading h1 {
+        font-size: 25px;
+      }
+
+      .heading h2 {
+        font-size: 15px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 210vh;
+      }
+
+      .stores {
+        height: 207vh;
+        width: 100%;
+      }
+
+      .stores .card {
+        width: 420px;
+        height: 300px;
+
+      }
+
+      .stores .card-img {
+        width: 420px;
+        height: 230px;
+      }
+
+      .stores .card-img img {
+        width: 420px;
+        height: 230px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 70px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 18px;
+        height: 2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 15px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+    }
+
+    @media (min-width:400px) and (max-width:469px) {
+      .mshow {
+        height: 25vh;
+      }
+
+      .mshoww {
+        height: 25vh;
+      }
+
+      .heading h1 {
+        font-size: 23px;
+      }
+
+      .heading h2 {
+        font-size: 13px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 205vh;
+      }
+
+      .stores {
+        height: 200vh;
+        width: 100%;
+      }
+
+      .stores .card {
+        width: 360px;
+        height: 270px;
+
+      }
+
+      .stores .card-img {
+        width: 360px;
+        height: 200px;
+      }
+
+      .stores .card-img img {
+        width: 360px;
+        height: 200px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 70px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 18px;
+        height: 2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 15px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+    }
+
+    @media (min-width:350px) and (max-width:399px) {
+      .mshow {
+        height: 25vh;
+      }
+
+      .mshoww {
+        height: 25vh;
+      }
+
+      .heading h1 {
+        font-size: 20px;
+      }
+
+      .heading h2 {
+        font-size: 10px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 249vh;
+      }
+
+      .stores {
+        height: 249vh;
+        width: 100%;
+      }
+
+      .stores .card {
+        width: 310px;
+        height: 270px;
+
+      }
+
+      .stores .card-img {
+        width: 310px;
+        height: 200px;
+      }
+
+      .stores .card-img img {
+        width: 310px;
+        height: 200px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 70px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 18px;
+        height: 2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 15px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+    }
+
+    @media (min-width:315px) and (max-width:349px) {
+      .mshow {
+        height: 25vh;
+      }
+
+      .mshoww {
+        height: 25vh;
+      }
+
+      .heading h1 {
+        font-size: 20px;
+      }
+
+      .heading h2 {
+        font-size: 10px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 210vh;
+      }
+
+      .stores {
+        height: 205vh;
+        width: 100%;
+      }
+
+      .stores .card {
+        width: 270px;
+        height: 220px;
+
+      }
+
+      .stores .card-img {
+        width: 270px;
+        height: 150px;
+      }
+
+      .stores .card-img img {
+        width: 270px;
+        height: 150px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 70px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 18px;
+        height: 2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 15px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+    }
+
+    @media (min-width:280px) and (max-width:314px) {
+      .mshow {
+        height: 25vh;
+      }
+
+      .mshoww {
+        height: 25vh;
+      }
+
+      .heading h1 {
+        font-size: 20px;
+      }
+
+      .heading h2 {
+        font-size: 10px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 205vh;
+      }
+
+      .stores {
+        height: 205vh;
+        width: 100%;
+      }
+
+      .stores .card {
+        width: 240px;
+        height: 204px;
+
+      }
+
+      .stores .card-img {
+        width: 240px;
+        height: 150px;
+      }
+
+      .stores .card-img img {
+        width: 240px;
+        height: 150px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 54px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 18px;
+        height: 2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 15px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+    }
+
+    @media (min-width:200px) and (max-width:279px) {
+      .mshow {
+        height: 15vh;
+      }
+
+      .mshoww {
+        height: 15vh;
+      }
+
+      .heading {
+        height: 5vh;
+      }
+
+      .heading h1 {
+        font-size: 10px;
+        margin-top: 10px;
+      }
+
+      .heading h2 {
+        margin-top: -3px;
+        font-size: 6px;
+      }
+
+      .mainbody {
+        width: 100%;
+        height: 120vh;
+      }
+
+      .stores {
+        margin-left: -8;
+        height: 120vh;
+        width: 100%;
+      }
+
+      .stores .card {
+        width: 175px;
+        height: 140px;
+
+      }
+
+      .stores .card-img {
+        width: 175px;
+        height: 100px;
+      }
+
+      .stores .card-img img {
+        width: 175px;
+        height: 100px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .stores .card-footer {
+        text-shadow: none;
+        height: 40px;
+        width: 100%;
+      }
+
+      .stores .card-footer h5 {
+        color: black;
+        font-size: 12px;
+        height: 1.2vh;
+        margin-top: 0px;
+      }
+
+      .stores .card-footer i {
+        color: rgb(97, 89, 89);
+        font-size: 10px;
+        margin-left: -3px;
+      }
+
+      #circle {
+        font-size: 6px;
+        margin-left: 0px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="desktopview">
+    <nav class="container-fluid nvbar fixed-top"
+      style="background-image: linear-gradient(to bottom left, black, #85178536)">
+      <ul class=" d-flex  justify-content-center justify-content-around  align-items-center list-unstyled">
+        <li><a href="http://" class="text-light fw-semibold fs-5">HOME</a></li>
+        <li><a href="http://" class="text-light fw-semibold fs-5">ABOUT</a></li>
+        <li><a href="http://"><img src="images/logo.png" alt="chowlogo"></a></li>
+        <li><a href="http://" class="text-light fw-semibold fs-5">CONTACT</a></li>
+        <li>
+          <div class="dropdown text-light float-end">
+            <button class="btn d-flex justify-content-center align-items-center text-light fw-semibold fs-5 border-0"
+              id="dropbtn"><i class="fa fa-user-circle  justify-content-between"></i> Profile
+            </button>
+            <!--  profile dropdown menu -->
+            <div class="dropdown-content non bg-light rounded-3 " id="dropcont">
+              <ul class="d-block justify-content-between align-items-center list-unstyled menuitems">
+                <li><a href="index.html" class="text-black fw-semibold">Login</a></li>
+                <li><a href="signup.html" class="text-black fw-semibold">Sign Up</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="container-fluid bg-light" style="width: 100%; margin-top: 8vh; height: 1vh;"></div>
+    <div class="container-fluid show">
+      <div class="container-fluid showw" id="bigm"></div>
+      <div class="container-fluid showw " id="bgh"></div>
+      <div class="container-fluid showw" id="dhl"></div>
+      <div class="container-fluid showw " id="an"></div>
+      <div class="container-fluid showw" id="onyx"></div>
+      <div class="container-fluid showw " id="buth"></div>
+    </div>
+
+    <div class="container-fluid heading d-flex flex-column justify-content-center align-items-center">
+      <h1 class="text-black"> Welcome to <span class="fw-bold" style="color: rgb(168, 36, 168);">CHOW!</span></h1>
+      <h2 class="fw-semibold" style="color: rgb(0, 49, 0);"> Enjoy Delicious Meals Delivered Right to Your Door!</h2>
+    </div>
+
+    <div class="container-fluid mainbody d-flex justify-content-center align-items-center">
+      <div class="container-fluid stores d-flex justify-content-around flex-wrap">
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/jollof.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Big Meals</h5>
+              <i class="fa fa-star-half-empty"> 4.1 <i class="fa fa-circle"></i> ₦ <i class="fa fa-circle"></i>
+                Babcock</i>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/bghimg.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Babcock Guest House</h5>
+              <i class="fa fa-star"> 5.0 <i class="fa fa-circle"></i> ₦ <i class="fa fa-circle"></i> Babcock</i>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/andrews.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Andrews Park</h5>
+              <i class="fa fa-star-half-empty"> 3.5 <i class="fa fa-circle"></i> ₦ <i class="fa fa-circle"></i>
+                Babcock</i>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/buth.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Buth Canteen</h5>
+              <i class="fa fa-star"> 5.0 <i class="fa fa-circle"></i> ₦ <i class="fa fa-circle"></i> Babcock</i>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/onyx.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Onyx Food store</h5>
+              <i class="fa fa-star-half-empty"> 4.5 <i class="fa fa-circle"></i> ₦ <i class="fa fa-circle"></i>
+                Babcock</i>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/super.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Babcock SuperStore</h5>
+              <i class="fa fa-star-half-empty"> 3.0 <i class="fa fa-circle"></i> ₦ <i class="fa fa-circle"></i>
+                Babcock</i>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="container-fluid d-flex justify-content-between align-items-center footer">
+      <h6>Terms and Conditions . Privacy Policy</h6>
+      <h6>&copy; Copyright 2023 CHOW is a registered trademark</h6>
+    </div>
+  </section>
+
+  <!-- take note that from 769 upwards is where it is still on flex -->
+  <!-- then flex column from 768 till 78 -->
+  <section class="mobileview">
+    <nav class="container-fluid nvbar bg-dark fixed-top">
+      <ul class="d-block justify-content-center justify-content-around  align-items-center list-unstyled">
+        <li class="float-start"><a href="http://"><img src="images/logo.png" alt="chowlogo"></a></li>
+        <button class="btn float-end d-flex justify-content-center align-items-center" style="height: 100%;"
+          id="toggle-nav"><i class="fa fa-bars text-light"></i></button>
+      </ul>
+    </nav>
+    <div class="navpage bg-black" id="navbar">
+      <div class="fixed-top d-flex align-items-center" style="height: 5vh;"><button class="btn border-0"
+          id="navclose"><i class="fa fa-times-circle text-light"></i></button>
+      </div>
+      <ul class=" d-block list-unstyled" style="width: 100%; height: 100%; margin-top: 5vh;">
+        <li><a href="http://" class="text-light fw-semibold fs-5">HOME</a></li>
+        <li><a href="http://" class="text-light fw-semibold fs-5">ABOUT</a></li>
+        <li><a href="http://" class="text-light fw-semibold fs-5">CONTACT</a></li>
+        <li>
+          <a href="http://"><button
+              class="btn d-flex justify-content-center align-items-center text-light fw-semibold fs-5 border-0"
+              id="mdropbtn"><i class="fa fa-user-circle  justify-content-between"></i> Profile
+            </button></a>
+
+        </li>
+
+        <div class="container-fluid d-flex flex-column justify-content-between align-items-center footer">
+          <h6 class="text-light">Terms and Conditions . Privacy Policy</h6>
+          <h6 class="text-light text-center">&copy; Copyright 2023 CHOWw is a registered trademark</h6>
+        </div>
+
+      </ul>
+
+    </div>
+
+    <div class="container-fluid bg-light" style="width: 100%; margin-top: 5vh; height: 1vh;"></div>
+    <div class="container-fluid mshow">
+      <div class="container-fluid mshoww" id="mbigm"></div>
+      <div class="container-fluid mshoww " id="mbgh"></div>
+      <div class="container-fluid mshoww" id="mdhl"></div>
+      <div class="container-fluid mshoww " id="man"></div>
+      <div class="container-fluid mshoww" id="monyx"></div>
+      <div class="container-fluid mshoww " id="mbuth"></div>
+    </div>
+
+    <div class="container-fluid heading d-flex flex-column justify-content-center align-items-center">
+      <h1 class="text-black"> Welcome to <span class="fw-bold" style="color: purple;">CHOW!</span></h1>
+      <h2 class="text-success fw-semibold"> Enjoy Delicious Meals Delivered Right to Your Door!</h2>
+    </div>
+
+    <div class="container-fluid mainbody d-flex justify-content-center align-items-center">
+      <div class="container-fluid stores justify-content-around flex-wrap">
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/jollof.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Big Meals</h5>
+              <i class="fa fa-star-half-empty"> 4.1 <i class="fa fa-circle" id="circle"></i> ₦ <i class="fa fa-circle"
+                  id="circle"></i>
+                Babcock</i>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/bghimg.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Babcock Guest House</h5>
+              <i class="fa fa-star"> 5.0 <i class="fa fa-circle" id="circle"></i> ₦ <i class="fa fa-circle"
+                  id="circle"></i>
+                Babcock</i>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/andrews.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Andrews Park</h5>
+              <i class="fa fa-star-half-empty"> 3.5 <i class="fa fa-circle" id="circle"></i> ₦ <i class="fa fa-circle"
+                  id="circle"></i> Babcock</i>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/buth.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Buth Canteen</h5>
+              <i class="fa fa-star"> 5.0 <i class="fa fa-circle" id="circle"></i> ₦ <i class="fa fa-circle"
+                  id="circle"></i>
+                Babcock</i>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/onyx.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Onyx Food store</h5>
+              <i class="fa fa-star-half-empty"> 4.5 <i class="fa fa-circle" id="circle"></i> ₦ <i class="fa fa-circle"
+                  id="circle"></i> Babcock</i>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://">
+          <div class="card border-0 rounded-top-2 bg-light">
+            <div class="card-img"> <img src="images/super.jpg" alt="bigmeals"></div>
+            <div class="card-footer d-block">
+              <h5 class="fw-bold">Babcock SuperStore</h5>
+              <i class="fa fa-star-half-empty"> 3.0 <i class="fa fa-circle" id="circle"></i> ₦ <i class="fa fa-circle"
+                  id="circle"></i> Babcock</i>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <script>const dropbtn = document.querySelector('#dropbtn')
+    const dropcont = document.querySelector("#dropcont")
+    dropbtn.addEventListener('click', function (e) {
+      dropcont.classList.toggle('non')
+      console.log("asa")
+    })
+  </script>
+  <script>let advertNo = 0;
+
+    advertM()
+    function advertM() {
+      let ads = document.getElementsByClassName("showw");
+
+
+      for (let i = 0; i < ads.length; i++) {
+        ads[i].style.display = "none"
+      }
+      advertNo++;
+      if (advertNo > ads.length) {
+        advertNo = 1;
+      }
+      ads[advertNo - 1].style.display = "flex";
+      setTimeout(advertM, 9500)
+
+    }
+
+    let madvertNo = 0;
+
+    advertMm()
+    function advertMm() {
+      let mads = document.getElementsByClassName("mshoww");
+
+
+      for (let i = 0; i < mads.length; i++) {
+        mads[i].style.display = "none"
+      }
+      madvertNo++;
+      if (madvertNo > mads.length) {
+        madvertNo = 1;
+      }
+      mads[madvertNo - 1].style.display = "flex";
+      setTimeout(advertMm, 9500)
+
+    }
+
+  </script>
+  <script>const navbtn = document.querySelector('#toggle-nav')
+
+    const navbar = document.querySelector('#navbar')
+    const cartClose = document.querySelector('#navclose')
+
+    navbtn.addEventListener('click', function () {
+      navbar.style.transform = 'translate(0%)'
+    })
+    navclose.addEventListener('click', function () {
+      navbar.style.transform = 'translate(100%)'
+    })</script>
+</body>
+
+</html>
